@@ -11,6 +11,7 @@ public class LoginTest extends BaseTest {
     By byErrorMessage3 = By.cssSelector("[data-uia='login-field+validationMessage']");
     By byErrorMessage2 = By.cssSelector("[data-uia='password-field+validationMessage']");
 
+    //deneme
 
     @Test
     public void loginSuccesfull() throws InterruptedException {
@@ -33,8 +34,6 @@ public class LoginTest extends BaseTest {
       sleep(3000);
         String Text = driver.findElement(byErrorMessage).getText();
         Assert.assertEquals(Text, "Incorrect password for msbiskin@hotmail.com");
-        driver.quit();
-        System.out.println(Text);
     }
 
     @Test
