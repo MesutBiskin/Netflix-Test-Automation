@@ -47,4 +47,14 @@ public class LoginTest extends BaseTest {
                 .validPasswordControl("Your password must contain between 4 and 60 characters.");
     }
 
+    @Test(description =  "Bos Karakter Kontrolu")
+    public void requiredControl() {
+
+        loginPage.fillUserName("")
+                .fillPassword("")
+                .clickLogin()
+                .validEmailMessageControl("Please enter a valid email.")
+                .validPasswordControl("Your password must contain between 4 and 60 characters.");
+    }
+
 }
